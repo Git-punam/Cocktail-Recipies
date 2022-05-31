@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body > main{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+body > main > .cocktails{
+    height: 50%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+}
+body > main > .cocktails > .card{
+    background-color: blue;
+    height: 150px;
+    width: 150px;
+    margin: 20px;
+}
+.cocktail-image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.recipie{
+    height:20% ;
+    width: 90%;
+    background-color: aqua;
+    margin-top: 50px;
+    text-align: center;
+    padding: 30px;
+}
+.heading{
+    color: white;
+    padding-bottom: 20px;
+    font-style: italic;
+    text-align: center;
+}
