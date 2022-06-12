@@ -39,6 +39,11 @@ body > main > .cocktails > .card{
     text-align: center;
     padding: 30px;
 }
+.recipie > p{
+    color: darkblue;
+    font-size: medium;
+
+}
 .heading{
     color: white;
     padding-bottom: 20px;

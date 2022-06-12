@@ -9,6 +9,7 @@ fetch(url)
         
     function createCard(item,index){
         let cocktail = item.strDrink;
+        let imageUrl = item.strDrinkThumb;
 
         // create parent container for the card
         let divForCard = document.createElement("div")
@@ -20,7 +21,7 @@ fetch(url)
         let lower = cocktail.toLowerCase();
         const regex = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~ ]/g;
         lower = lower.replace(regex,'');
-        forImage.setAttribute("src","./image/"+lower+".jpg")
+        forImage.setAttribute("src",imageUrl)
 
         // create h5 node for the cocktail names
         let forTitle = document.createElement("h5")
@@ -44,7 +45,11 @@ fetch(url)
                 if(document.querySelector(".recipie").hasChildNodes())
                 {
                     document.querySelector(".recipie").innerHTML = ''
+                    let strGlass = data.drinks[i].strGlass;
                     let recipie = data.drinks[i].strInstructions;
+                    let strGlassToShow = document.createElement("p");
+                    strGlassToShow.textContent = "Grab a "+ strGlass +"."
+                    document.querySelector(".recipie").appendChild(strGlassToShow);
                     let recipieToShow = document.createElement("p");
                     recipieToShow.textContent = recipie
                     document.querySelector(".recipie").appendChild(recipieToShow);
